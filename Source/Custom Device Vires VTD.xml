@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Custom Device.xsd">
+<XSDVersion Major="2010" Minor="0" Fix="0" Build="0" />
+  <AddMenu>
+    <eng>Virtual Test Drive</eng>
+    <loc>Virtual Test Drive</loc>
+  </AddMenu>
+  <Version>2.0.2</Version>
+  <Type>Inline HW Interface</Type>
+  <MaxOccurrence>1</MaxOccurrence>
+  <MainPageGUID>353f2512-b107-4c99-9510-7a0eded912f5</MainPageGUID>
+  <InitializationVI>
+    <Type>Action</Type>
+    <Item2Launch>
+      <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Initialization VI.vi</Path>
+    </Item2Launch>
+  </InitializationVI>
+  <CustomDeviceVI>
+		<SourceDistribution>
+			<Source>
+				<SupportedTarget>Windows</SupportedTarget>
+				<Source>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\Vires VTD\Windows\Vires VTD Engine Windows.llb\RT Driver VI.vi</Path>
+				</Source>
+				<RealTimeSystemDestination>c:\ni-rt\VeriStand\Custom Devices\Vires VTD\Vires VTD Engine Windows.llb\RT Driver VI.vi</RealTimeSystemDestination>
+			</Source>
+			<Source>
+				<SupportedTarget>Pharlap</SupportedTarget>
+				<Source>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\Vires VTD\Pharlap\Vires VTD Engine Pharlap.llb\RT Driver VI.vi</Path>
+				</Source>
+				<RealTimeSystemDestination>c:\ni-rt\VeriStand\Custom Devices\Vires VTD\Vires VTD Engine Pharlap.llb\RT Driver VI.vi</RealTimeSystemDestination>
+			</Source>
+			<Source>
+				<SupportedTarget>Linux_x64</SupportedTarget>
+				<Source>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\Vires VTD\Linux64\Vires VTD Engine Linux64.llb\RT Driver VI.vi</Path>
+				</Source>
+				<RealTimeSystemDestination>c:\ni-rt\VeriStand\Custom Devices\Vires VTD\Vires VTD Engine Linux64.llb\RT Driver VI.vi</RealTimeSystemDestination>
+			</Source>
+<!-- 			<Source>
+				<SupportedTarget>VxWorks</SupportedTarget>
+				<Source>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\Vires VTD\c\Vires VTD Engine VxWorks.llb\RT Driver VI.vi</Path>
+				</Source>
+				<RealTimeSystemDestination>c:\ni-rt\VeriStand\Custom Devices\Vires VTD\Vires VTD Engine VxWorks.llb\RT Driver VI.vi</RealTimeSystemDestination>
+			</Source>	
+			<Source>
+				<SupportedTarget>Linux_32_ARM</SupportedTarget>
+				<Source>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\Vires VTD\Vires VTD Engine LinuxARM.llb\RT Driver VI.vi</Path>
+				</Source>
+				<RealTimeSystemDestination>c:\ni-rt\VeriStand\Custom Devices\Vires VTD\Vires VTD Engine LinuxARM.llb\RT Driver VI.vi</RealTimeSystemDestination>
+			</Source> -->
+		</SourceDistribution>
+	</CustomDeviceVI>
+  <Dependencies />
+  <Pages>
+    <Page>
+      <Name>
+        <eng>Vires VTD</eng>
+        <loc>Vires VTD</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+      <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+	  <GUID>353f2512-b107-4c99-9510-7a0eded912f5</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\Vires VTD\Glyphs\VTD.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Main Page.vi</Path>
+      </Item2Launch>
+	  <RunTimeMenu>
+        <MenuItem>
+          <GUID>40A87F3E-5D68-08AB-CFB6-6FD004FE962A</GUID>
+          <Type>Action</Type>
+          <Name>
+            <eng>Disable</eng>
+            <loc>Disable</loc>
+          </Name>
+          <Item2Launch>
+            <Type>To Common Doc Dir</Type>
+            <Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\EnableDisable Main Page.vi</Path>
+          </Item2Launch>
+        </MenuItem>
+	</RunTimeMenu>
+      <ActionVIOnLoad>
+        <Type>To Common Doc Dir</Type>
+        <Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\ActionVIOnLoad.vi</Path>
+      </ActionVIOnLoad>
+	<ActionVIOnDownload>
+        <Type>To Common Doc Dir</Type>
+        <Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\ActionVIOnDownload.vi</Path>
+    </ActionVIOnDownload>
+	<ActionVIOnCompile>
+        <Type>To Common Doc Dir</Type>
+        <Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\ActionVIOnCompile.vi</Path>
+      </ActionVIOnCompile>
+    </Page>
+	
+	<Page>
+      <Name>
+        <eng>Vires VTD</eng>
+        <loc>Vires VTD</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+      <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+	  <GUID>60592157-0220-4fd1-bb66-4eab64c0d69b</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\Vires VTD\Glyphs\VTD_disabled.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Main Page.vi</Path>
+      </Item2Launch>
+	  <RunTimeMenu>
+        <MenuItem>
+          <GUID>40A87F3E-5D68-08AB-CFB6-6FD004FE962A</GUID>
+          <Type>Action</Type>
+          <Name>
+            <eng>Enable</eng>
+            <loc>Enable</loc>
+          </Name>
+          <Item2Launch>
+            <Type>To Common Doc Dir</Type>
+            <Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\EnableDisable Main Page.vi</Path>
+          </Item2Launch>
+        </MenuItem>
+		</RunTimeMenu>
+      <ActionVIOnLoad>
+        <Type>To Common Doc Dir</Type>
+        <Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\ActionVIOnLoad.vi</Path>
+      </ActionVIOnLoad>
+	  <ActionVIOnCompile>
+        <Type>To Common Doc Dir</Type>
+        <Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\ActionVIOnCompile.vi</Path>
+      </ActionVIOnCompile>
+    </Page>
+    
+	<Page>
+      <Name>
+        <eng>Data Page</eng>
+        <loc>Data Page</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+	  <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+      <GUID>e3955479-4dd4-4df4-8c6a-7421ee36a79e</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\userfolder.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Data Page.vi</Path>
+      </Item2Launch>
+    </Page>
+	
+	<Page>
+      <Name>
+        <eng>Control Page</eng>
+        <loc>Control Page</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+	  <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+      <GUID>e1234479-4dd4-4df4-8c6a-7421ee36a79e</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\userfolder.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Control Page.vi</Path>
+      </Item2Launch>
+    </Page>
+	
+	<Page>
+      <Name>
+        <eng>Custom SCP Command Page</eng>
+        <loc>Custom SCP Command Page</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+	  <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+      <GUID>a74b8f30-7919-4e49-b0a8-0a995d19792c</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\Vires VTD\Glyphs\VTD_CustomCommand.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Custom SCP Command Page.vi</Path>
+      </Item2Launch>
+	  	<ButtonList>
+			<Button>
+				<ID>Export</ID>
+				<Glyph>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\Vires VTD\Glyphs\VTD_Export.png</Path>
+				</Glyph>
+				<Type>Notification</Type>
+				<ReferencedGUID>a74b8f30-7919-4e49-b0a8-0a995d19792c</ReferencedGUID>
+				<ButtonText>
+					<eng>Export to CSV</eng>
+					<loc>Export to CSV</loc>
+				</ButtonText>
+				<Caption>
+					<eng>Export to CSV</eng>
+					<loc>Export to CSV</loc>
+				</Caption>
+					<TipStrip>
+					<eng>Export to CSV</eng>
+					<loc>Export to CSV</loc>
+				</TipStrip>
+				<Documentation>
+					<eng></eng>
+					<loc></loc>
+				</Documentation>
+			</Button>
+			<Button>
+				<ID>Import</ID>
+				<Glyph>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\Vires VTD\Glyphs\VTD_Import.png</Path>
+				</Glyph>
+				<Type>Notification</Type>
+				<ReferencedGUID>a74b8f30-7919-4e49-b0a8-0a995d19792c</ReferencedGUID>
+				<ButtonText>
+					<eng>Import CSV</eng>
+					<loc>Import CSV</loc>
+				</ButtonText>
+				<Caption>
+					<eng>Import CSV</eng>
+					<loc>Import CSV</loc>
+				</Caption>
+					<TipStrip>
+					<eng>Import CSV</eng>
+					<loc>Import CSV</loc>
+				</TipStrip>
+				<Documentation>
+					<eng></eng>
+					<loc></loc>
+				</Documentation>
+			</Button>
+		</ButtonList>
+    </Page>
+	
+	<Page>
+      <Name>
+        <eng>Receive</eng>
+        <loc>Receive</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+	  <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+      <GUID>e1234579-4dd4-4df4-8c6a-7421ee36a79e</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\userfolder.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Receive Page.vi</Path>
+      </Item2Launch>
+    </Page>
+	
+	<Page>
+      <Name>
+        <eng>Status</eng>
+        <loc>Status</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+	  <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+      <GUID>e1234479-4dd4-4df4-ffff-7421ee36a79e</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\NI-XNET Frame Information.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Status Page.vi</Path>
+      </Item2Launch>
+    </Page>
+	
+	<Page>
+      <Name>
+        <eng>Status Channel</eng>
+        <loc>Status Channel</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+	  <ExcludeFromAlphabeticalOrder>false</ExcludeFromAlphabeticalOrder>
+      <GUID>1c5c4ba3-58c3-4b06-8594-037c48e58688</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\NI-XNET Status.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Status Channel Page.vi</Path>
+      </Item2Launch>
+    </Page>
+	
+	<Page>
+      <Name>
+        <eng>Status Time</eng>
+        <loc>Status Time</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+	  <ExcludeFromAlphabeticalOrder>false</ExcludeFromAlphabeticalOrder>
+      <GUID>7010c573-acbe-46a4-a0eb-2dfca4172be4</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\Elapsed Time.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Status Channel Page.vi</Path>
+      </Item2Launch>
+    </Page>
+
+	<Page>
+      <Name>
+        <eng>Status Error</eng>
+        <loc>Status Error</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+	  <ExcludeFromAlphabeticalOrder>false</ExcludeFromAlphabeticalOrder>
+      <GUID>e6604a1e-ac70-4f52-887c-1c84b4d0fede</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\NI-XNET Error.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Status Channel Page.vi</Path>
+      </Item2Launch>
+    </Page>
+	
+	<Page>
+      <Name>
+        <eng>Status Command</eng>
+        <loc>Status Command</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+	  <ExcludeFromAlphabeticalOrder>false</ExcludeFromAlphabeticalOrder>
+      <GUID>c9af40a3-0f6c-479e-bf1f-8e920242783a</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\Vires VTD\Glyphs\VTD_Command.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Status Channel Page.vi</Path>
+      </Item2Launch>
+    </Page>
+	
+	<Page>
+      <Name>
+        <eng>Generic Channel</eng>
+        <loc>Generic Channel</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+	  <ExcludeFromAlphabeticalOrder>false</ExcludeFromAlphabeticalOrder>
+      <GUID>67e8cc4e-c6f3-4f9e-89c6-959629af069a</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\default fpga channel.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Status Channel Page.vi</Path>
+      </Item2Launch>
+    </Page>
+	
+	<Page>
+      <Name>
+        <eng>Simulation Time</eng>
+        <loc>Simulation Time</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+	  <ExcludeFromAlphabeticalOrder>false</ExcludeFromAlphabeticalOrder>
+      <GUID>04a2836d-e5e6-4863-a17e-ba936490a375</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\NI-XNET Periodic.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Status Channel Page.vi</Path>
+      </Item2Launch>
+    </Page>
+	
+	<Page>
+      <Name>
+        <eng>Scenario Selection</eng>
+        <loc>Scenario Selection</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+	  <ExcludeFromAlphabeticalOrder>false</ExcludeFromAlphabeticalOrder>
+      <GUID>9a66d7b2-5877-47ad-af27-ff67d1338762</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\NI-XNET RawFrameDataLogging.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Scenario Selection Page.vi</Path>
+      </Item2Launch>
+	  	<ButtonList>
+			<Button>
+				<ID>Export</ID>
+				<Glyph>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\Vires VTD\Glyphs\VTD_Export.png</Path>
+				</Glyph>
+				<Type>Notification</Type>
+				<ReferencedGUID>9a66d7b2-5877-47ad-af27-ff67d1338762</ReferencedGUID>
+				<ButtonText>
+					<eng>Export to CSV</eng>
+					<loc>Export to CSV</loc>
+				</ButtonText>
+				<Caption>
+					<eng>Export to CSV</eng>
+					<loc>Export to CSV</loc>
+				</Caption>
+					<TipStrip>
+					<eng>Export to CSV</eng>
+					<loc>Export to CSV</loc>
+				</TipStrip>
+				<Documentation>
+					<eng></eng>
+					<loc></loc>
+				</Documentation>
+			</Button>
+			<Button>
+				<ID>Import</ID>
+				<Glyph>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\Vires VTD\Glyphs\VTD_Import.png</Path>
+				</Glyph>
+				<Type>Notification</Type>
+				<ReferencedGUID>9a66d7b2-5877-47ad-af27-ff67d1338762</ReferencedGUID>
+				<ButtonText>
+					<eng>Import CSV</eng>
+					<loc>Import CSV</loc>
+				</ButtonText>
+				<Caption>
+					<eng>Import CSV</eng>
+					<loc>Import CSV</loc>
+				</Caption>
+					<TipStrip>
+					<eng>Import CSV</eng>
+					<loc>Import CSV</loc>
+				</TipStrip>
+				<Documentation>
+					<eng></eng>
+					<loc></loc>
+				</Documentation>
+			</Button>
+		</ButtonList>
+    </Page>
+	
+	<Page>
+      <Name>
+        <eng>Sent</eng>
+        <loc>Sent</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+	  <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+      <GUID>b065f6f6-976e-46c5-ac29-eaf4c0fa7449</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\userfolder.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Sent Page.vi</Path>
+      </Item2Launch>
+    </Page>
+	
+	<Page>
+      <Name>
+        <eng>Structure Section</eng>
+        <loc>Structure Section</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+      <GUID>b065f6f6-976e-46c5-4882-eaf4c0fa7449</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\userfolder.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Structure Page.vi</Path>
+      </Item2Launch>
+    </Page>
+	
+	<Page>
+      <Name>
+        <eng>ModuleManager</eng>
+        <loc>ModuleManager</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+	  <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+      <GUID>e3955479-4dd4-4df4-8c6a-7421ee36a72e</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\userfolder.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\ModuleManager Page.vi</Path>
+      </Item2Launch>
+    </Page>
+	
+	<Page>
+      <Name>
+        <eng>TaskControl</eng>
+        <loc>TaskControl</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+	  <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+      <GUID>e3955479-4dd4-4df4-8c6a-7421ee36a71e</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\userfolder.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\TaskControl Page.vi</Path>
+      </Item2Launch>
+    </Page>
+	
+	<Page>
+      <Name>
+        <eng>Sensor Page</eng>
+        <loc>Sensor Page</loc>
+      </Name>
+	  <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+      <GUID>e3955479-4dd4-4df4-8c6a-7421ee36a88f</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\userfolder.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Sensor Page.vi</Path>
+      </Item2Launch>
+    </Page>
+	
+	<Page>
+      <Name>
+        <eng>Object Page</eng>
+        <loc>Object Page</loc>
+      </Name>
+	  <ExcludeFromAlphabeticalOrder>true</ExcludeFromAlphabeticalOrder>
+      <GUID>e1239479-4dd4-4df4-8c6a-7421ee36a88f</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\userfolder.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Vires VTD\Vires VTD Configuration.llb\Object Page.vi</Path>
+      </Item2Launch>
+    </Page>
+	
+	
+	
+  </Pages>
+  <CustomXML>
+    <Dummy></Dummy>
+  </CustomXML>
+</CustomDevice>
